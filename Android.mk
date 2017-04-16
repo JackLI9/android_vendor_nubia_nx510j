@@ -1,5 +1,4 @@
-# Copyright (C) 2015-2016 The CyanogenMod Project
-# Copyright (C) 2017 The LineageOS Project
+# Copyright (C) 2017 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -19,6 +18,8 @@ LOCAL_PATH := $(call my-dir)
 
 ifeq ($(TARGET_DEVICE),nx510j)
 
+
+ifeq ($(QCPATH),)
 include $(CLEAR_VARS)
 LOCAL_MODULE := libloc_api_v02
 LOCAL_MODULE_OWNER := zte
@@ -52,94 +53,22 @@ LOCAL_MODULE_SUFFIX := .so
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE := libdiag
-LOCAL_MODULE_OWNER := zte
-LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/libdiag.so
-LOCAL_SRC_FILES_32 := proprietary/vendor/lib/libdiag.so
-LOCAL_MULTILIB := both
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-LOCAL_MODULE_SUFFIX := .so
-LOCAL_PROPRIETARY_MODULE := true
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE := libdsutils
-LOCAL_MODULE_OWNER := zte
-LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/libdsutils.so
-LOCAL_SRC_FILES_32 := proprietary/vendor/lib/libdsutils.so
-LOCAL_MULTILIB := both
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-LOCAL_MODULE_SUFFIX := .so
-LOCAL_PROPRIETARY_MODULE := true
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE := libidl
-LOCAL_MODULE_OWNER := zte
-LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/libidl.so
-LOCAL_SRC_FILES_32 := proprietary/vendor/lib/libidl.so
-LOCAL_MULTILIB := both
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-LOCAL_MODULE_SUFFIX := .so
-LOCAL_PROPRIETARY_MODULE := true
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE := libqcci_legacy
-LOCAL_MODULE_OWNER := zte
-LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/libqcci_legacy.so
-LOCAL_SRC_FILES_32 := proprietary/vendor/lib/libqcci_legacy.so
-LOCAL_MULTILIB := both
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-LOCAL_MODULE_SUFFIX := .so
-LOCAL_PROPRIETARY_MODULE := true
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE := libqmi
-LOCAL_MODULE_OWNER := zte
-LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/libqmi.so
-LOCAL_SRC_FILES_32 := proprietary/vendor/lib/libqmi.so
-LOCAL_MULTILIB := both
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-LOCAL_MODULE_SUFFIX := .so
-LOCAL_PROPRIETARY_MODULE := true
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE := libqmi_cci
-LOCAL_MODULE_OWNER := zte
-LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/libqmi_cci.so
-LOCAL_SRC_FILES_32 := proprietary/vendor/lib/libqmi_cci.so
-LOCAL_MULTILIB := both
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-LOCAL_MODULE_SUFFIX := .so
-LOCAL_PROPRIETARY_MODULE := true
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE := libqmi_client_qmux
-LOCAL_MODULE_OWNER := zte
-LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/libqmi_client_qmux.so
-LOCAL_SRC_FILES_32 := proprietary/vendor/lib/libqmi_client_qmux.so
-LOCAL_MULTILIB := both
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-LOCAL_MODULE_SUFFIX := .so
-LOCAL_PROPRIETARY_MODULE := true
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
 LOCAL_MODULE := libqmiservices
 LOCAL_MODULE_OWNER := zte
 LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/libqmiservices.so
 LOCAL_SRC_FILES_32 := proprietary/vendor/lib/libqmiservices.so
+LOCAL_MULTILIB := both
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_PROPRIETARY_MODULE := true
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libthermalclient
+LOCAL_MODULE_OWNER := zte
+LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/libthermalclient.so
+LOCAL_SRC_FILES_32 := proprietary/vendor/lib/libthermalclient.so
 LOCAL_MULTILIB := both
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
@@ -241,6 +170,18 @@ LOCAL_PRIVILEGED_MODULE := true
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
+LOCAL_MODULE := fastdormancy
+LOCAL_MODULE_OWNER := zte
+LOCAL_SRC_FILES := proprietary/priv-app/fastdormancy/fastdormancy.apk
+LOCAL_CERTIFICATE := platform
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := APPS
+LOCAL_DEX_PREOPT := false
+LOCAL_MODULE_SUFFIX := .apk
+LOCAL_PRIVILEGED_MODULE := true
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
 LOCAL_MODULE := qcrilmsgtunnel
 LOCAL_MODULE_OWNER := zte
 LOCAL_SRC_FILES := proprietary/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
@@ -296,7 +237,19 @@ LOCAL_MODULE_CLASS := JAVA_LIBRARIES
 LOCAL_MODULE_SUFFIX := .jar
 include $(BUILD_PREBUILT)
 
+endif
+
+ifneq ($(TARGET_HAVE_QC_PERF),true)
+endif
 
 $(shell mkdir -p $(PRODUCT_OUT)/system/vendor/lib/egl && pushd $(PRODUCT_OUT)/system/vendor/lib > /dev/null && ln -s egl/libEGL_adreno.so libEGL_adreno.so && popd > /dev/null)
 $(shell mkdir -p $(PRODUCT_OUT)/system/vendor/lib64/egl && pushd $(PRODUCT_OUT)/system/vendor/lib64 > /dev/null && ln -s egl/libEGL_adreno.so libEGL_adreno.so && popd > /dev/null)
+
+ifeq ($(LOCAL_PATH)/radio, $(wildcard $(LOCAL_PATH)/radio))
+RADIO_FILES := $(shell cd $(LOCAL_PATH)/radio ; ls)
+$(foreach f, $(RADIO_FILES), \
+    $(call add-radio-file,radio/$(f)))
+$(call add-radio-file,../../../device/zte/nx510j/radio/filesmap)
+endif
+
 endif
