@@ -120,7 +120,6 @@ PRODUCT_COPY_FILES += \
     vendor/nubia/nx510j/proprietary/lib/libNubiaxmptoolkit.so:system/lib/libNubiaxmptoolkit.so \
     vendor/nubia/nx510j/proprietary/lib/libalRnB.so:system/lib/libalRnB.so \
     vendor/nubia/nx510j/proprietary/lib/libalSDE2.so:system/lib/libalSDE2.so \
-    vendor/nubia/nx510j/proprietary/lib/libaudio-resampler.so:system/lib/libaudio-resampler.so \
     vendor/nubia/nx510j/proprietary/lib/libbuffer_manager.so:system/lib/libbuffer_manager.so \
     vendor/nubia/nx510j/proprietary/lib/libentryexstd.so:system/lib/libentryexstd.so \
     vendor/nubia/nx510j/proprietary/lib/libmm-qcamera.so:system/lib/libmm-qcamera.so \
@@ -149,7 +148,6 @@ PRODUCT_COPY_FILES += \
     vendor/nubia/nx510j/proprietary/lib64/libNubiaxmptoolkit.so:system/lib64/libNubiaxmptoolkit.so \
     vendor/nubia/nx510j/proprietary/lib64/libalRnB.so:system/lib64/libalRnB.so \
     vendor/nubia/nx510j/proprietary/lib64/libalSDE2.so:system/lib64/libalSDE2.so \
-    vendor/nubia/nx510j/proprietary/lib64/libaudio-resampler.so:system/lib64/libaudio-resampler.so \
     vendor/nubia/nx510j/proprietary/lib64/libbuffer_manager.so:system/lib64/libbuffer_manager.so \
     vendor/nubia/nx510j/proprietary/lib64/libentryexstd.so:system/lib64/libentryexstd.so \
     vendor/nubia/nx510j/proprietary/lib64/libmorpho_panorama_gp.so:system/lib64/libmorpho_panorama_gp.so \
