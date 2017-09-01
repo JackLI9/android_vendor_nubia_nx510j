@@ -32,6 +32,7 @@ PRODUCT_COPY_FILES += \
     vendor/nubia/nx510j/proprietary/bin/irsc_util:system/bin/irsc_util \
     vendor/nubia/nx510j/proprietary/bin/loc_launcher:system/bin/loc_launcher \
     vendor/nubia/nx510j/proprietary/bin/mm-pp-daemon:system/bin/mm-pp-daemon \
+    vendor/nubia/nx510j/proprietary/bin/mm-qcamera-app:system/bin/mm-qcamera-app \
     vendor/nubia/nx510j/proprietary/bin/mm-qcamera-daemon:system/bin/mm-qcamera-daemon \
     vendor/nubia/nx510j/proprietary/bin/msm_irqbalance:system/bin/msm_irqbalance \
     vendor/nubia/nx510j/proprietary/bin/netmgrd:system/bin/netmgrd \
@@ -117,11 +118,7 @@ PRODUCT_COPY_FILES += \
     vendor/nubia/nx510j/proprietary/lib/libIndependenceUtil.so:system/lib/libIndependenceUtil.so \
     vendor/nubia/nx510j/proprietary/lib/libNubiaImageAlgorithm.so:system/lib/libNubiaImageAlgorithm.so \
     vendor/nubia/nx510j/proprietary/lib/libNubiaxmptoolkit.so:system/lib/libNubiaxmptoolkit.so \
-    vendor/nubia/nx510j/proprietary/lib/libalRnB.so:system/lib/libalRnB.so \
-    vendor/nubia/nx510j/proprietary/lib/libalSDE2.so:system/lib/libalSDE2.so \
-    vendor/nubia/nx510j/proprietary/lib/libaudio-resampler.so:system/lib/libaudio-resampler.so \
     vendor/nubia/nx510j/proprietary/lib/libbuffer_manager.so:system/lib/libbuffer_manager.so \
-    vendor/nubia/nx510j/proprietary/lib/libentryexstd.so:system/lib/libentryexstd.so \
     vendor/nubia/nx510j/proprietary/lib/libmm-qcamera.so:system/lib/libmm-qcamera.so \
     vendor/nubia/nx510j/proprietary/lib/libmmcamera_interface.so:system/lib/libmmcamera_interface.so \
     vendor/nubia/nx510j/proprietary/lib/libmmcamera_nubiacustpro.so:system/lib/libmmcamera_nubiacustpro.so \
@@ -130,9 +127,10 @@ PRODUCT_COPY_FILES += \
     vendor/nubia/nx510j/proprietary/lib/libmulti_exposure.so:system/lib/libmulti_exposure.so \
     vendor/nubia/nx510j/proprietary/lib/libnubia_effect.so:system/lib/libnubia_effect.so \
     vendor/nubia/nx510j/proprietary/lib/libnubiajpeg.so:system/lib/libnubiajpeg.so \
-    vendor/nubia/nx510j/proprietary/lib/libnubiajpeg_temp.so:system/lib/libnubiajpeg_temp.so \
     vendor/nubia/nx510j/proprietary/lib/libpanoramahelper.so:system/lib/libpanoramahelper.so \
     vendor/nubia/nx510j/proprietary/lib/libproductinfo.so:system/lib/libproductinfo.so \
+    vendor/nubia/nx510j/proprietary/lib/libswresample.so:system/lib/libswresample.so \
+    vendor/nubia/nx510j/proprietary/lib/libswscale.so:system/lib/libswscale.so \
     vendor/nubia/nx510j/proprietary/lib/libqomx_core.so:system/lib/libqomx_core.so \
     vendor/nubia/nx510j/proprietary/lib/libqti-iop.so:system/lib/libqti-iop.so \
     vendor/nubia/nx510j/proprietary/lib/libshim_camera.so:system/lib/libshim_camera.so \
@@ -146,17 +144,15 @@ PRODUCT_COPY_FILES += \
     vendor/nubia/nx510j/proprietary/lib64/libIndependenceUtil.so:system/lib64/libIndependenceUtil.so \
     vendor/nubia/nx510j/proprietary/lib64/libNubiaImageAlgorithm.so:system/lib64/libNubiaImageAlgorithm.so \
     vendor/nubia/nx510j/proprietary/lib64/libNubiaxmptoolkit.so:system/lib64/libNubiaxmptoolkit.so \
-    vendor/nubia/nx510j/proprietary/lib64/libalRnB.so:system/lib64/libalRnB.so \
-    vendor/nubia/nx510j/proprietary/lib64/libalSDE2.so:system/lib64/libalSDE2.so \
-    vendor/nubia/nx510j/proprietary/lib64/libaudio-resampler.so:system/lib64/libaudio-resampler.so \
     vendor/nubia/nx510j/proprietary/lib64/libbuffer_manager.so:system/lib64/libbuffer_manager.so \
-    vendor/nubia/nx510j/proprietary/lib64/libentryexstd.so:system/lib64/libentryexstd.so \
     vendor/nubia/nx510j/proprietary/lib64/libmorpho_panorama_gp.so:system/lib64/libmorpho_panorama_gp.so \
     vendor/nubia/nx510j/proprietary/lib64/libmulti_exposure.so:system/lib64/libmulti_exposure.so \
     vendor/nubia/nx510j/proprietary/lib64/libnubia_delay_recorder.so:system/lib64/libnubia_delay_recorder.so \
     vendor/nubia/nx510j/proprietary/lib64/libnubiajpeg.so:system/lib64/libnubiajpeg.so \
     vendor/nubia/nx510j/proprietary/lib64/libpanoramahelper.so:system/lib64/libpanoramahelper.so \
     vendor/nubia/nx510j/proprietary/lib64/libproductinfo.so:system/lib64/libproductinfo.so \
+    vendor/nubia/nx510j/proprietary/lib64/libswresample.so:system/lib64/libswresample.so \
+    vendor/nubia/nx510j/proprietary/lib64/libswscale.so:system/lib64/libswscale.so \
     vendor/nubia/nx510j/proprietary/lib64/libqti-iop.so:system/lib64/libqti-iop.so \
     vendor/nubia/nx510j/proprietary/lib64/libshim_camera.so:system/lib64/libshim_camera.so \
     vendor/nubia/nx510j/proprietary/lib64/libshim_ims-camera.so:system/lib64/libshim_ims-camera.so \
@@ -727,11 +723,13 @@ PRODUCT_COPY_FILES += \
     vendor/nubia/nx510j/proprietary/vendor/lib64/libmm-color-convertor.so:system/vendor/lib64/libmm-color-convertor.so \
     vendor/nubia/nx510j/proprietary/vendor/lib64/libmm-disp-apis.so:system/vendor/lib64/libmm-disp-apis.so \
     vendor/nubia/nx510j/proprietary/vendor/lib64/libmm-qdcm.so:system/vendor/lib64/libmm-qdcm.so \
+    vendor/nubia/nx510j/proprietary/vendor/lib64/libmmQSM.so:system/vendor/lib64/libmmQSM.so \
     vendor/nubia/nx510j/proprietary/vendor/lib64/libmmcamera2_q3a_core.so:system/vendor/lib64/libmmcamera2_q3a_core.so \
     vendor/nubia/nx510j/proprietary/vendor/lib64/libmmcamera2_sensor_debug.so:system/vendor/lib64/libmmcamera2_sensor_debug.so \
     vendor/nubia/nx510j/proprietary/vendor/lib64/libmmcamera2_stats_algorithm.so:system/vendor/lib64/libmmcamera2_stats_algorithm.so \
     vendor/nubia/nx510j/proprietary/vendor/lib64/libmmcamera_ov5645.so:system/vendor/lib64/libmmcamera_ov5645.so \
     vendor/nubia/nx510j/proprietary/vendor/lib64/libmmosal.so:system/vendor/lib64/libmmosal.so \
+    vendor/nubia/nx510j/proprietary/vendor/lib64/libmmparser.so:system/vendor/lib64/libmmparser.so \
     vendor/nubia/nx510j/proprietary/vendor/lib64/libnetmgr.so:system/vendor/lib64/libnetmgr.so \
     vendor/nubia/nx510j/proprietary/vendor/lib64/libperipheral_client.so:system/vendor/lib64/libperipheral_client.so \
     vendor/nubia/nx510j/proprietary/vendor/lib64/libqc-opt.so:system/vendor/lib64/libqc-opt.so \
