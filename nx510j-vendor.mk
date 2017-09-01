@@ -111,6 +111,9 @@ PRODUCT_COPY_FILES += \
     vendor/nubia/nx510j/proprietary/framework/tcmclient.jar:system/framework/tcmclient.jar \
     vendor/nubia/nx510j/proprietary/lib/hw/camera.msm8994.so:system/lib/hw/camera.msm8994.so \
     vendor/nubia/nx510j/proprietary/lib/libAlgorithm.so:system/lib/libAlgorithm.so \
+    vendor/nubia/nx510j/proprietary/lib/libavcodec.so:system/lib/libavcodec.so \
+    vendor/nubia/nx510j/proprietary/lib/libavformat.so:system/lib/libavformat.so \
+    vendor/nubia/nx510j/proprietary/lib/libavutil.so:system/lib/libavutil.so \
     vendor/nubia/nx510j/proprietary/lib/libBuffer.so:system/lib/libBuffer.so \
     vendor/nubia/nx510j/proprietary/lib/libBurstProcessJni.so:system/lib/libBurstProcessJni.so \
     vendor/nubia/nx510j/proprietary/lib/libFNVfbEngineHAL.so:system/lib/libFNVfbEngineHAL.so \
@@ -118,6 +121,8 @@ PRODUCT_COPY_FILES += \
     vendor/nubia/nx510j/proprietary/lib/libIndependenceUtil.so:system/lib/libIndependenceUtil.so \
     vendor/nubia/nx510j/proprietary/lib/libNubiaImageAlgorithm.so:system/lib/libNubiaImageAlgorithm.so \
     vendor/nubia/nx510j/proprietary/lib/libNubiaxmptoolkit.so:system/lib/libNubiaxmptoolkit.so \
+    vendor/nubia/nx510j/proprietary/lib/libalRnB.so:system/lib/libalRnB.so \
+    vendor/nubia/nx510j/proprietary/lib/libalSDE2.so:system/lib/libalSDE2.so \
     vendor/nubia/nx510j/proprietary/lib/libbuffer_manager.so:system/lib/libbuffer_manager.so \
     vendor/nubia/nx510j/proprietary/lib/libmm-qcamera.so:system/lib/libmm-qcamera.so \
     vendor/nubia/nx510j/proprietary/lib/libmmcamera_interface.so:system/lib/libmmcamera_interface.so \
@@ -138,12 +143,19 @@ PRODUCT_COPY_FILES += \
     vendor/nubia/nx510j/proprietary/lib/libshims_ims.so:system/lib/libshims_ims.so \
     vendor/nubia/nx510j/proprietary/lib64/hw/sensors.oem.so:system/lib64/hw/sensors.oem.so \
     vendor/nubia/nx510j/proprietary/lib64/libAlgorithm.so:system/lib64/libAlgorithm.so \
+    vendor/nubia/nx510j/proprietary/lib64/libavcodec.so:system/lib64/libavcodec.so \
+    vendor/nubia/nx510j/proprietary/lib64/libavfilter.so:system/lib64/libavfilter.so \
+    vendor/nubia/nx510j/proprietary/lib64/libavformat.so:system/lib64/libavformat.so \
+    vendor/nubia/nx510j/proprietary/lib64/libavutil.so:system/lib64/libavutil.so \
     vendor/nubia/nx510j/proprietary/lib64/libBuffer.so:system/lib64/libBuffer.so \
     vendor/nubia/nx510j/proprietary/lib64/libBurstProcessJni.so:system/lib64/libBurstProcessJni.so \
     vendor/nubia/nx510j/proprietary/lib64/libFNVfbEngineLib.so:system/lib64/libFNVfbEngineLib.so \
     vendor/nubia/nx510j/proprietary/lib64/libIndependenceUtil.so:system/lib64/libIndependenceUtil.so \
     vendor/nubia/nx510j/proprietary/lib64/libNubiaImageAlgorithm.so:system/lib64/libNubiaImageAlgorithm.so \
+    vendor/nubia/nx510j/proprietary/lib64/libnubia_clone.so:system/lib64/libnubia_clone.so \
     vendor/nubia/nx510j/proprietary/lib64/libNubiaxmptoolkit.so:system/lib64/libNubiaxmptoolkit.so \
+    vendor/nubia/nx510j/proprietary/lib64/libalRnB.so:system/lib64/libalRnB.so \
+    vendor/nubia/nx510j/proprietary/lib64/libalSDE2.so:system/lib64/libalSDE2.so \
     vendor/nubia/nx510j/proprietary/lib64/libbuffer_manager.so:system/lib64/libbuffer_manager.so \
     vendor/nubia/nx510j/proprietary/lib64/libmorpho_panorama_gp.so:system/lib64/libmorpho_panorama_gp.so \
     vendor/nubia/nx510j/proprietary/lib64/libmulti_exposure.so:system/lib64/libmulti_exposure.so \
