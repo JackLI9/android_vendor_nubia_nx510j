@@ -117,29 +117,7 @@ PRODUCT_COPY_FILES += \
     vendor/nubia/nx510j/proprietary/lib/libqomx_core.so:system/lib/libqomx_core.so \
     vendor/nubia/nx510j/proprietary/lib/libqti-iop.so:system/lib/libqti-iop.so \
     vendor/nubia/nx510j/proprietary/lib64/hw/sensors.oem.so:system/lib64/hw/sensors.oem.so \
-    vendor/nubia/nx510j/proprietary/lib64/libAlgorithm.so:system/lib64/libAlgorithm.so \
-    vendor/nubia/nx510j/proprietary/lib64/libBuffer.so:system/lib64/libBuffer.so \
-    vendor/nubia/nx510j/proprietary/lib64/libBurstProcessJni.so:system/lib64/libBurstProcessJni.so \
-    vendor/nubia/nx510j/proprietary/lib64/libFNVfbEngineLib.so:system/lib64/libFNVfbEngineLib.so \
-    vendor/nubia/nx510j/proprietary/lib64/libIndependenceUtil.so:system/lib64/libIndependenceUtil.so \
-    vendor/nubia/nx510j/proprietary/lib64/libNubiaImageAlgorithm.so:system/lib64/libNubiaImageAlgorithm.so \
-    vendor/nubia/nx510j/proprietary/lib64/libNubiaxmptoolkit.so:system/lib64/libNubiaxmptoolkit.so \
-    vendor/nubia/nx510j/proprietary/lib64/libalRnB.so:system/lib64/libalRnB.so \
-    vendor/nubia/nx510j/proprietary/lib64/libalSDE2.so:system/lib64/libalSDE2.so \
-    vendor/nubia/nx510j/proprietary/lib64/libavcodec.so:system/lib64/libavcodec.so \
-    vendor/nubia/nx510j/proprietary/lib64/libavfilter.so:system/lib64/libavfilter.so \
-    vendor/nubia/nx510j/proprietary/lib64/libavformat.so:system/lib64/libavformat.so \
-    vendor/nubia/nx510j/proprietary/lib64/libavutil.so:system/lib64/libavutil.so \
-    vendor/nubia/nx510j/proprietary/lib64/libbuffer_manager.so:system/lib64/libbuffer_manager.so \
-    vendor/nubia/nx510j/proprietary/lib64/libmorpho_panorama_gp.so:system/lib64/libmorpho_panorama_gp.so \
-    vendor/nubia/nx510j/proprietary/lib64/libmulti_exposure.so:system/lib64/libmulti_exposure.so \
-    vendor/nubia/nx510j/proprietary/lib64/libnubia_delay_recorder.so:system/lib64/libnubia_delay_recorder.so \
-    vendor/nubia/nx510j/proprietary/lib64/libnubiajpeg.so:system/lib64/libnubiajpeg.so \
-    vendor/nubia/nx510j/proprietary/lib64/libpanoramahelper.so:system/lib64/libpanoramahelper.so \
-    vendor/nubia/nx510j/proprietary/lib64/libproductinfo.so:system/lib64/libproductinfo.so \
     vendor/nubia/nx510j/proprietary/lib64/libqti-iop.so:system/lib64/libqti-iop.so \
-    vendor/nubia/nx510j/proprietary/lib64/libswresample.so:system/lib64/libswresample.so \
-    vendor/nubia/nx510j/proprietary/lib64/libswscale.so:system/lib64/libswscale.so \
     vendor/nubia/nx510j/proprietary/vendor/bin/perfd:system/vendor/bin/perfd \
     vendor/nubia/nx510j/proprietary/vendor/bin/qti:system/vendor/bin/qti \
     vendor/nubia/nx510j/proprietary/vendor/bin/slim_daemon:system/vendor/bin/slim_daemon \
@@ -764,7 +742,6 @@ PRODUCT_PACKAGES += \
     libwpa_qmi_eap_proxy \
     libqmiservices \
     libtime_genoff \
-    NubiaCamera \
     QtiTelephonyService \
     TimeService \
     shutdownlistener \
