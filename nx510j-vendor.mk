@@ -745,10 +745,8 @@ PRODUCT_PACKAGES += \
     QtiTelephonyService \
     TimeService \
     shutdownlistener \
-    CNEService \
     QtiTetherService \
     com.qualcomm.location \
-    dpmserviceapp \
     fastdormancy \
     qcrilmsgtunnel \
     ims \
